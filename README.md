@@ -55,7 +55,7 @@ The project is designed for SOC teams to identify newly exposed services and cha
 <strong>Venkat Vellapalem</strong>
 </a>
 <br>
-Project Lead
+Contributor
 </td>
 
 <td align="center">
