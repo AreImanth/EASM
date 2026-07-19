@@ -34,9 +34,11 @@ The project is designed for SOC teams to identify newly exposed services and cha
 - Python
 - Splunk Enterprise
 - Shodan API
+- Censys [Internet wide scanner]
+- Netlas.io [Internet wide scanner]
 - Docker
 - AWS EC2
-
+- 
 ---
 
 ## Project Status
