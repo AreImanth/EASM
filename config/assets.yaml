@@ -1,11 +1,11 @@
-organization: Blue Corp
+organization: <organization name> # exapmle - example.com
 
 assets:
   - type: ip
-    value: 8.8.8.8
+    value: <ip> # example - 8.8.8.8
 
   - type: ip
-    value: 1.1.1.1
+    value: <ip>  # example - 1.1.1.1
 
   - type: cidr
-    value: 192.168.1.0/24
+    value: <example ip>/24
