@@ -1,10 +1,10 @@
 {
   "event": {
-    "ip": "203.0.113.10",
-    "port": 443,
-    "product": "nginx",
-    "banner": "test event from curl"
+    "ip": "<testing_ip>",
+    "port": <port>,
+    "product": "nginx",  #examples- nginx, Apache
+    "banner": "test event from curl" #banners can be anything when you are testing
   },
-  "index": "as_index",
-  "sourcetype": "shodan:scan"
+  "index": "<your index name which is specified in splunk>",
+  "sourcetype": "<source type in the index>"
 }
