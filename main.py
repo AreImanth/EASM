@@ -1,27 +1,3 @@
-"""
-main.py
--------------------------------------------------------------
-THE ORCHESTRATOR.
-
-Flow:
-    load_targets()            -> what to check (core/assets.py)
-    expand_target()             -> targets -> individual IPs
-    each configured collector    -> IP -> list[Finding]  (collectors/)
-    dedup_findings()               -> clean up this run's results (utils/)
-    add_clean_status()               -> proof-of-run even with zero findings
-    RiskEngine.score_all()             -> severity per finding (core/risk_engine.py)
-    transport.send()                     -> ship everything out (transport/)
-
-Adding a new source: write a new collectors/<name>_client.py
-implementing BaseCollector, then add one line below to include it
-in `collectors`. Nothing else changes.
-
-Adding a new destination: write a new transport/<name>.py
-implementing BaseTransport, then swap/add it in `active_transports`
-below. Nothing else changes.
--------------------------------------------------------------
-"""
-
 import collectors
 from core.assets import load_targets, expand_target, AssetLoadError
 from core.config import get_settings
@@ -71,7 +47,7 @@ def build_collectors(settings) -> list:
 
     shodan = ShodanCollector(settings)
     if shodan.is_configured():
-        collectors.append(shodan)          # <-- NEW: participates in per-IP loop now
+        collectors.append(shodan)       
     else:
         log.info("Shodan not configured -- running without it (org targets also skipped).")
 
@@ -104,7 +80,6 @@ def process_target(target: Target, collectors: list, shodan: ShodanCollector) ->
             try:
                 ip_findings.extend(collector.collect(ip))
             except Exception as e:
-                # One collector failing must not kill the whole run.
                 log.error(f"[{collector.source_name}] unexpected failure on {ip}: {e}")
                 continue
         ip_findings = add_clean_status(ip_findings, ip)
