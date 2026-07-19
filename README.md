@@ -38,7 +38,6 @@ The project is designed for SOC teams to identify newly exposed services and cha
 - Netlas.io [Internet wide scanner]
 - Docker
 - AWS EC2
-- 
 ---
 
 ## Project Status
