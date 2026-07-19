@@ -8,7 +8,7 @@ from core.models import Finding
 log = get_logger(__name__)
 
 BASE_URL = "https://app.netlas.io/api/host"
-FREE_TIER_DAILY_LIMIT = 50
+LIMIT = 50 
 
 
 def _extract_software_by_port(software_list: list) -> dict[int, str]:
@@ -65,7 +65,7 @@ class NetlasCollector(BaseCollector):
         if not self.is_configured():
             return findings 
 
-        if self.calls_made >= FREE_TIER_DAILY_LIMIT:
+        if self.calls_made >= LIMIT:
             log.warning(f"[{self.source_name}] daily free-tier limit reached -- skipping {ip}")
             return findings
 
