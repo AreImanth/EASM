@@ -1,7 +1,7 @@
 {
   "event": {
     "ip": "<testing_ip>",
-    "port": <port>,
+    "port": "<port>",
     "product": "nginx",  #examples- nginx, Apache
     "banner": "test event from curl" #banners can be anything when you are testing
   },
