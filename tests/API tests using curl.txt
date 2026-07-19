@@ -4,24 +4,5 @@ curl -H "Authorization: Bearer <censys_api>" -H "Accept: application/vnd.censys.
 
 
 Shodan: 
-curl -s -o response.json -w "%{http_code}" "https://api.shodan.io/shodan/host/search?key=YOUR_KEY&query=org:%22<name of org>%22"
+curl -s -o response.json -w "%{http_code}" "https://api.shodan.io/shodan/host/search?key=<Shodan_api_key>&query=org:%22<name of org>%22"
 type response.json
-
-
-
-
-
-
-
-
-
-
-
-IP's for testing:
-
-148.72.59.61
-72.63.118.136
-47.108.201.106
-64.236.133.29
-8.8.8.8
-137.74.187.101
