@@ -1,0 +1,10 @@
+{
+  "event": {
+    "ip": "203.0.113.10",
+    "port": 443,
+    "product": "nginx",
+    "banner": "test event from curl"
+  },
+  "index": "as_index",
+  "sourcetype": "shodan:scan"
+}
