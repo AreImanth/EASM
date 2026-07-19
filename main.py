@@ -50,7 +50,7 @@ def build_collectors(settings) -> list:
 
 
 def build_transports(settings) -> list:
-  #so far splunk is the oly tool which is configured, sentinel, wazuh, elk will be configured later
+  #so far splunk is the only tool which is configured, sentinel, wazuh, elk will be configured later
     return [SplunkHECTransport(settings)]
 
 
