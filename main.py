@@ -19,12 +19,7 @@ log = get_logger(__name__)
 
 
 def build_collectors(settings) -> list:
-    """
-    InternetDB is always included (no credentials needed). Censys is
-    included only if configured. Shodan is handled separately below,
-    since it's used for 'org' targets via collect_org(), not the
-    per-IP collect() loop.
-    """
+
     collectors = [InternetDBCollector()]
 
     censys = CensysCollector(settings)
@@ -55,11 +50,7 @@ def build_collectors(settings) -> list:
 
 
 def build_transports(settings) -> list:
-    """
-    Splunk is the only working transport today. Sentinel/Wazuh/ELK
-    are registered here once their transport/*.py files are actually
-    implemented -- see the stub docstrings for what's needed.
-    """
+  #so far splunk is the oly tool which is configured, sentinel, wazuh, elk will be configured later
     return [SplunkHECTransport(settings)]
 
 
