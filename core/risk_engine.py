@@ -8,7 +8,6 @@ log = get_logger(__name__)
 
 DEFAULT_SEVERITY = "Low"
 
-
 class RiskEngine:
     def __init__(self, rules_path: str = "data/severity_rules.csv"):
         self.rules_path = Path(rules_path)
@@ -38,7 +37,6 @@ class RiskEngine:
         return self._rules.get(finding.port, DEFAULT_SEVERITY)
 
     def score_all(self, findings: list[Finding]) -> list[Finding]:
-        """Mutates and returns the list, with .severity set on each Finding."""
         for f in findings:
             f.severity = self.score(f)
         return findings
