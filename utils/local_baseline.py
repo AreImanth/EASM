@@ -1,14 +1,3 @@
-"""
-utils/local_baseline.py
--------------------------------------------------------------
-Local, file-based "is this new" check -- runs entirely inside
-main.py, synchronously, every time the script executes. This is
-what makes alerting independent of Splunk's own scheduler or any
-OS-level task scheduler: the check happens the moment the script
-runs, not on a separate clock.
--------------------------------------------------------------
-"""
-
 import csv
 from datetime import datetime, timezone
 from pathlib import Path
