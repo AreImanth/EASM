@@ -1,11 +1,3 @@
-"""
-utils/processors.py
--------------------------------------------------------------
-General-purpose cleanup helpers applied after collection, before
-findings go to the risk engine / transport.
--------------------------------------------------------------
-"""
-
 from core.logger import get_logger
 from core.models import Finding
 
@@ -16,9 +8,7 @@ def dedup_findings(findings: list[Finding]) -> list[Finding]:
     """
     Removes exact duplicate (ip, port, source) results within a single
     run -- e.g. if a CIDR range and an individually-listed IP overlap
-    in assets.yaml. This is NOT the same as the day-over-day "is this
-    new" baseline check (that lives entirely in Splunk lookup tables) --
-    this only dedupes within one collection run.
+    in assets.yaml.
     """
     seen = set()
     unique = []
@@ -36,11 +26,7 @@ def dedup_findings(findings: list[Finding]) -> list[Finding]:
 
 
 def add_clean_status(findings: list[Finding], ip: str) -> list[Finding]:
-    """
-    If no collector found anything for this IP, append a single
-    'clean' status Finding -- gives positive proof the tool actually
-    checked this IP, rather than silently producing zero events.
-    """
+   # If no collector found anything for this IP, append a single line - clean run
     if findings:
         return findings
 
