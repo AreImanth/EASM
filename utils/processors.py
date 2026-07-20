@@ -26,7 +26,7 @@ def dedup_findings(findings: list[Finding]) -> list[Finding]:
 
 
 def add_clean_status(findings: list[Finding], ip: str) -> list[Finding]:
-   # If no collector found anything for this IP, append a single line - clean run
+   # If no collector found anything for this IP, append a single line - "clean run" stating that no collecotr found any exposed port
     if findings:
         return findings
 
