@@ -2,8 +2,8 @@
   "event": {
     "ip": "<testing_ip>",
     "port": "<port>",
-    "product": "nginx",  #examples- nginx, Apache
-    "banner": "test event from curl" #banners can be anything when you are testing
+    "product": "nginx",  // examples- nginx, Apache
+    "banner": "test event from curl"  //banners can be anything when you are testing
   },
   "index": "<your index name which is specified in splunk>",
   "sourcetype": "<source type in the index>"
