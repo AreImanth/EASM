@@ -13,14 +13,7 @@ class Target:
 
 @dataclass
 class Finding:
-    """
-    A single normalized result from any collector.
-
-    `port` is Optional because a "clean" result (nothing exposed for
-    a target) is still recorded as a Finding, just with status="clean"
-    and port=None -- this gives us positive proof the collector ran,
-    even on a day with nothing to report.
-    """
+ 
     ip: str
     collector_source: str                                  
     port: Optional[int] = None
