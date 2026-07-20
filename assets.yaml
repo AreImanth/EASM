@@ -1,0 +1,19 @@
+# -------------------------------------------------------------
+# Asset Inventory
+# Only include IPs/ranges you own or are explicitly authorized
+# to monitor.
+# -------------------------------------------------------------
+organization: "Your Organization Name"
+
+targets:
+  - type: ip
+    value: "<single_ip>"   
+    
+  - type: ip
+    value: "<single_ip>"      
+
+  - type: cidr
+    value: "<ip_range>"        
+
+  - type: org                      # requires SHODAN_API_KEY (paid/unlocked account)
+    value: "<org_name>"
