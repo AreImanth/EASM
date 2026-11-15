@@ -51,18 +51,18 @@ The project is designed for SOC teams to identify newly exposed services and cha
 <table>
 <tr>
 <td align="center">
-<a href="https://github.com/venkatvellapalem" target="_blank">
-<img src="https://github.com/venkatvellapalem.png" width="100px;" alt="Venkat"/><br>
-<strong>Venkat Vellapalem</strong>
+<a href="https://github.com/AreImanth" target="_blank">
+<img src="https://github.com/AreImanth.png" width="100px;" alt="Collaborator"/><br>
+<strong>Are Imanth</strong>
 </a>
 <br>
 Contributor
 </td>
 
 <td align="center">
-<a href="https://github.com/AreImanth" target="_blank">
-<img src="https://github.com/AreImanth.png" width="100px;" alt="Collaborator"/><br>
-<strong>Are Imanth</strong>
+<a href="https://github.com/venkatvellapalem" target="_blank">
+<img src="https://github.com/venkatvellapalem.png" width="100px;" alt="Venkat"/><br>
+<strong>Venkat Vellapalem</strong>
 </a>
 <br>
 Contributor
