@@ -137,7 +137,7 @@ Under active development.
 
 ---
 
-##Contributors
+## Contributors
 
 <table>
   <tr>
