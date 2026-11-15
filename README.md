@@ -137,10 +137,24 @@ Under active development.
 
 ---
 
-## Maintainer and collaborators
+##Contributors
 
-| [![Are Imanth](https://github.com/AreImanth.png?size=80) **Are Imanth**]<br> | [![Venkat Vellapalem](https://github.com/venkatvellapalem.png?size=80) **Venkat Vellapalem**]<br> |
-|---|---|
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/AreImanth">
+        <img src="https://github.com/AreImanth.png?size=100" width="100" alt="Are Imanth"><br>
+        <b>Are Imanth</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/venkatvellapalem">
+        <img src="https://github.com/venkatvellapalem.png?size=100" width="100" alt="Venkat Vellapalem"><br>
+        <b>Venkat Vellapalem</b>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ---
 
